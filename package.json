@@ -1,20 +1,8 @@
 {
-  "name": "orinoco-backend",
+  "name": "prepros-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "description": "This is a dummy package.json file created by Prepros to manage packages with NPM. You can edit this file to add your own information.",
   "dependencies": {
-    "bcrypt": "^5.0.0",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.3.8",
-    "mongoose-unique-validator": "^2.0.2",
-    "uuid": "^3.3.2"
+    "autoprefixer": "^10.2.1"
   }
 }
