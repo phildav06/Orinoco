@@ -25,9 +25,9 @@ firstPromise.then((response) => {
             <div class="card-body">
                 <p class="card-text text-white"><em>Réf. ${teddy._id}</em></p>
                 <h3 class="card-title fs-4 text-white">${teddy.name}</h3>
-                <p class="card-text textColor"><strong>${teddy.price} €</strong></p>
+                <p class="card-text text-color"><strong>${(teddy.price/100).toFixed(2)} €</strong></p>
                 <div class="row justify-content-center">
-                    <a href="produit.html" class="btn btn-light stretched-link col-10">Personnalisez ${teddy.name} !</a>
+                    <a href="produit.html?id=${teddy._id}" class="btn btn-light stretched-link col-10">Personnalisez ${teddy.name} !</a>
                 </div>
             </div>
         </div>`
