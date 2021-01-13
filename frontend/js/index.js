@@ -20,7 +20,7 @@ firstPromise.then((response) => {
         console.log(teddies);
         const articles = document.getElementById("articles");
         for (const teddy of teddies) {
-        const article = `<div class="card col-12 col-md-3 mx-md-5 mb-5 Small shadow bg-dark">
+        const article = `<div class="card col-12 col-md-3 mx-md-5 mb-5 p-0 Small shadow bg-dark">
             <img class="card-img-top" src="${teddy.imageUrl}" alt="Teddy">
             <div class="card-body">
                 <p class="card-text text-white"><em>Réf. ${teddy._id}</em></p>
@@ -38,3 +38,12 @@ firstPromise.then((response) => {
     })
 })
 .catch((err) => {console.log(err)}); // Aide à marquer les erreurs dans la console
+
+{/* <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> */}
