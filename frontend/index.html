@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Lien vers feuille de style CSS -->
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <!-- Lien Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <!-- Lien vers feuille de style CSS -->
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-
-    <!-- Lien Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  
-    <!-- Lien fontawesome -->
-    <script src="https://kit.fontawesome.com/ac73661cb6.js" crossorigin="anonymous"></script>
-
-    <title>Vente en ligne d'ours en peluche | Orinoco</title>
-  </head>
+  <!-- Lien fontawesome -->
+  <script src="https://kit.fontawesome.com/ac73661cb6.js" crossorigin="anonymous"></script>
+  <title>Vente en ligne d'ours en peluche | Orinoco</title>
+</head>
 
 <body class="bg-orinoco">
 
@@ -25,15 +22,16 @@
       <!-- barre de navigation -->
       <div class="container-fluid">
         <div class="row d-flex justify-content-center">
-          <div class="col-12 col-md-10">
+          <div class="col-md-10">
             <nav class="navbar navbar-light navbar-expand-md navigation-clean">
               <div class="container">
-                  <picture class="w-25"><a href="index.html"><img src="images/Orinoco.png" width="150" height="52" alt="logo"></a></picture>
+                  <a href="index.html" class="nabar-brand"><img src="images/Orinoco.png" width="150" height="52" alt="logo"></a>
                   <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
-                    <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                  <div class="collapse navbar-collapse" id="navcol-1">
-                      <ul class="nav navbar-nav ml-auto pull-right">
-                          <li class="nav-item"><a class="nav-link active" href="index.html">ACCUEIL</a></li>
+                    <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end" id="navcol-1">
+                      <ul class="nav navbar-nav">
+                          <li class="nav-item"><a class="nav-link font-weight-bold text-dark active" href="index.html">ACCUEIL</a></li>
                           <li class="nav-item"><a class="nav-link" href="panier.html">PANIER <i class="fas fa-cart-arrow-down"></i></a></li>
                       </ul>
                   </div>
@@ -47,7 +45,7 @@
     <!-- bandeau pastel-blue -->
     <div class="container-fluid">
         <div class="row d-flex justify-content-center">
-            <div class="col-12 col-md-10">
+            <div class="col-md-10">
               <div class="rounded-top bg-pastel-blue text-center p-4 mb-0 Small shadow">
                 <h1 class="h3 fs-md-2"><strong>Vente en ligne d'ours en peluche faits à la main</strong></h1>
               </div>
@@ -59,7 +57,7 @@
     <!-- bandeau image -->
     <div class="container-fluid">
       <div class="row d-flex justify-content-center">
-        <div class="col-12 col-md-10">
+        <div class="col-md-10">
           <div id="carouselBear" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-inner Small shadow">
               <div class="carousel-item active">
@@ -87,9 +85,9 @@
     <!-- bandeau gold -->
     <div class="container-fluid text-sombre">
       <div class="row d-flex justify-content-center">
-          <div class="col-12 col-md-10">
+          <div class="col-md-10">
             <div class="rounded-bottom bg-gold text-center p-3 p-md-1 Small shadow">
-              <h2 class="h5 fs-md-3">Personnalisez votre ours en peluche !</h2>
+              <h2 class="h5">Personnalisez votre ours en peluche !</h2>
               <p>Après avoir choisi votre ours ci-dessous, personnalisez-le en modifiant sa couleur.</p>
             </div>
           </div>
@@ -100,10 +98,12 @@
   <!-- end header -->
 
   <!-- articles -->
-  <main class="container-fluid mt-5 col-12 col-md-10">
-    <div id="articles" class="raw d-flex justify-content-start flex-wrap">
-          <!-- ici seront placés les articles -->
-    </div>
+  <main class="container-fluid mt-5">
+      <div class="raw d-flex justify-content-center">
+        <div class="col-md-10 d-flex justify-content-center flex-wrap" id="articles">
+            <!-- ici seront placés les articles -->
+        </div>
+      </div>
   </main>
   <!-- end articles -->
 
