@@ -35,8 +35,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navcol-1">
                     <ul class="nav navbar-nav mt-4">
                         <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="produit.html">PRODUIT</a></li> -->
-                        <li class="nav-item"><a class="nav-link font-weight-bold text-dark active" href="panier.html">PANIER <i class="fas fa-cart-arrow-down text-gold"> <span class="badge bg-gold text-dark">0</span></i></a></li>
+                        <li class="nav-item"><a class="nav-link active" href="panier.html">PANIER <i class="fas fa-cart-arrow-down text-gold"> <span class="badge bg-gold text-dark"></span></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -63,10 +62,9 @@
       <div class="row d-flex justify-content-center">
           <div class="col-md-10">
             <div class="rounded-bottom bg-gold text-center p-3 p-md-3 Small shadow">
-              <h2 class="h5">Celui-ci est tristement vide !</h2>
-              <h2 class="h5">Houra !  il se remplit...</h2>
-              
-              <!-- Si le panier contient des articles, modifier le texte par << Votre panier est heureux d'être rempli ! -->
+              <!-- Si le panier contient des articles, modifier le texte << Celui-ci est tristement vide ! >> PAR << Houra !  il se remplit... >> -->
+              <h2 id="vide" class="h5">Celui-ci est tristement vide !</h2>
+              <h2 id="plein" class="h5">Houra !  il se remplit...</h2>
             </div>
           </div>
       </div>
@@ -79,7 +77,7 @@
   <main class="container-fluid mt-5">
     <div class="raw d-flex justify-content-center">
       <div class="col-md-10 d-flex justify-content-center flex-wrap" id="cart">
-          <table class="table table-responsive-sm rounded small shadow mb-5 table-borderless">
+          <table class="table table-responsive-sm small shadow mb-5 table-borderless">
             <!-- en-têtes du tableau -->
             <thead class="table bg-gold">
               <tr class="text-center">
@@ -98,12 +96,12 @@
             </tbody>
 
             <!-- Prix total -->
-              <tr class="text-center">
+              <tr class="text-center bg-gold">
                 <th></th>
                 <th></th>
                 <th></th>
                 <th>Total</th>
-                <th>120.00 €</th>
+                <th id="total-price"> €</th>
                 <th></th>
               </tr>
           </table>
@@ -135,7 +133,7 @@
             <div class="form-row d-flex justify-content-start">
               <div class="col-md-3 mb-4 offset-md-3">
                 <label for="firstname">Prenom</label>
-                <input type="text" class="form-control" id="firstname" name="firstname" data-label="un prénom" data-regexp="name" placeholder="Votre prénom" required>
+                <input type="text" class="form-control" id="firstname" name="firstname" data-label="un prénom" data-regexp="^[a-zA-ZéÉèÈë-]+$" placeholder="Votre prénom" required>
                 <small>
                   <!-- Veuillez entrez un prénom valide ! -->
                 </small>
@@ -143,7 +141,7 @@
             
               <div class="col-md-3 mb-4">
                 <label for="lastname">Nom</label>
-                <input type="text" class="form-control" id="lastname" name="lastname" data-label="un nom" data-regexp="name" placeholder="Votre nom" required>
+                <input type="text" class="form-control" id="lastname" name="lastname" data-label="un nom" data-regexp="^[a-zA-ZéÉèÈë-]+$" placeholder="Votre nom" required>
                 <small>
                   <!-- Veuillez entrez un nom valide ! -->
                 </small>
@@ -153,7 +151,7 @@
             <div class="form-row">
               <div class="col-md-6 mb-4 offset-md-3">
                 <label for="postaladdress">Adresse</label>
-                <input type="text" class="form-control" id="postaladdress" name="postaladdress" data-label="une adresse" data-regexp="address"  placeholder="N° Bis, rue ou avenue, lieu-dit..." required>
+                <input type="text" class="form-control" id="postaladdress" name="postaladdress" data-label="une adresse" data-regexp="^[0-9BbbisBISBisTtterTERTerQqquaterQUATERQuater]+ [BbbisBISBisTtterTERTerQqquaterQUATERQuater, ]{0,8}[a-zA-Z0-9- ]+$"  placeholder="N° Bis, rue ou avenue, lieu-dit..." required>
                 <small>
                   <!-- Veuillez entrez une adresse valide ! -->
                 </small>
@@ -163,7 +161,7 @@
             <div class="form-row d-flex justify-content-start">
               <div class="col-md-2 mb-4 offset-md-3">
                 <label for="zipcode">Code postal</label>
-                <input type="text" class="form-control" id="zipcode" name="zipcode" data-label="un code postal" data-regexp="zipcode" placeholder="Votre code postal" required>
+                <input type="text" class="form-control" id="zipcode" name="zipcode" data-label="un code postal" data-regexp="^[0-9]{5}$" placeholder="Votre code postal" required>
                 <small>
                   <!-- Veuillez entrez un code postal valide ! -->
                 </small>
@@ -171,7 +169,7 @@
 
               <div class="col-md-4 mb-4">
                 <label for="city">Ville</label>
-                <input type="text" class="form-control" id="city" name="city" data-label="un nom de ville" data-regexp="name" placeholder="Votre ville" required>
+                <input type="text" class="form-control" id="city" name="city" data-label="un nom de ville" data-regexp="^[a-zA-ZéÉèÈë-]+$" placeholder="Votre ville" required>
                 <small>
                   <!-- Veuillez entrez un nom de ville valide ! -->
                 </small>
@@ -180,7 +178,7 @@
           <div class="form-row d-flex justify-content-start">
             <div class="col-md-6 mb-4 offset-md-3">
               <label for="email">E-mail</label>
-              <input type="email" class="form-control" id="email" name="email" data-label="un E-mail" data-regexp="email" placeholder="exemple@gmail.com" required>
+              <input type="email" class="form-control" id="email" name="email" data-label="un E-mail" data-regexp="^[a-zA-Z0-9\.-_]+[@]{1}[a-zA-Z0-9\.-_]+[\.]{1}[a-z]{2,10}$" placeholder="exemple@gmail.com" required>
               <small>
                 <!-- Entrez une adresse mail valide ! -->
               </small>
