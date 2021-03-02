@@ -100,8 +100,8 @@
                 <th></th>
                 <th></th>
                 <th></th>
-                <th>Total</th>
-                <th id="total-price"> €</th>
+                <th>Total:</th>
+                <th id="total-price"></th>
                 <th></th>
               </tr>
           </table>
@@ -128,7 +128,8 @@
     <div class="container-fluid text-sombre">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10">
-          <form action="" method="POST" class="needs-validation" novalidate>
+          
+          <form class="needs-validation" id="post-form"> <!-- action="http://localhost:3000/api/teddies/order" method="POST" -->
 
             <div class="form-row d-flex justify-content-start">
               <div class="col-md-3 mb-4 offset-md-3">
@@ -151,7 +152,7 @@
             <div class="form-row">
               <div class="col-md-6 mb-4 offset-md-3">
                 <label for="postaladdress">Adresse</label>
-                <input type="text" class="form-control" id="postaladdress" name="postaladdress" data-label="une adresse" data-regexp="^[0-9BbbisBISBisTtterTERTerQqquaterQUATERQuater]+ [BbbisBISBisTtterTERTerQqquaterQUATERQuater, ]{0,8}[a-zA-Z0-9- ]+$"  placeholder="N° Bis, rue ou avenue, lieu-dit..." required>
+                <input type="text" class="form-control" id="postaladdress" name="postaladdress" data-label="une adresse" data-regexp="^[0-9BbbisBISBisTtterTERTerQqquaterQUATERQuater]+ [BbbisBISBisTtterTERTerQqquaterQUATERQuater, ]{0,8}[a-zA-Z0-9-,' â]+$"  placeholder="N° Bis, rue ou avenue, lieu-dit..." required>
                 <small>
                   <!-- Veuillez entrez une adresse valide ! -->
                 </small>
@@ -188,7 +189,7 @@
             <!-- Passage de la commande avec formulaire -->
             <div class="col-12 mb-5">
               <div class="raw d-flex justify-content-center">
-                <input id="send" class="btn btn-success mb-5" type="submit" value="Commander !">
+                <button id="send" class="btn btn-success mb-5" type="submit" value="Commander !">Commander</button>
               </div>
             </div>
             <!-- end Passage de la commande avec formulaire -->
@@ -252,8 +253,10 @@
 </div>
 <!-- end Footer -->
 
-<!-- lien index.js -->
+<!-- lien panier.js -->
 <script async src="js/panier.js"></script>
+
+<!-- lien app.js -->
 <script async src="js/app.js"></script>
 
 <!-- liens Bootstrap js -->
