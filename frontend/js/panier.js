@@ -152,6 +152,8 @@ sendData = (orderRequest) => {
                 // Chargement vers la page de confirmation de commande
                 window.location.href = "commande.html"
                 resolve(JSON.parse(this.responseText));
+            } else {
+                reject(request.status);
             };
         };
         // Envoi de la requette au serveur
