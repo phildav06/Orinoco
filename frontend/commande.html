@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Lien vers feuille de style CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <!-- Lien Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <!-- Lien fontawesome -->
+  <script src="https://kit.fontawesome.com/ac73661cb6.js" crossorigin="anonymous"></script>
+
+  <title>Votre commande d'ours en peluche | Orinoco</title>
+</head>
+
+<body class="bg-orinoco">
+
+  <!-- header -->
+  <header class="col">
+    <!-- barre de navigation -->
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+          <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container">
+              <a href="index.html" class="nabar-brand"><img src="images/Orinoco.png" width="150" height="45"
+                  alt="logo"></a>
+              <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navcol-1">
+                <ul class="nav navbar-nav mt-4">
+                  <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
+                  <li class="nav-item"><a class="nav-link" href="panier.html">PANIER <i
+                        class="fas fa-cart-arrow-down text-gold"> <span class="badge bg-gold text-dark"></span></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- end barre de navigation -->
+
+    <!-- bandeau pastel-blue -->
+    <div class="container-fluid mt-3">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+          <div class="rounded bg-pastel-blue text-center p-3 mb-0 Small shadow">
+            <h1 class="h5 fs-md-2"><strong>Confirmation de commande</strong></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end bandeau pastel-blue -->
+  </header>
+  <!-- end header -->
+
+  <!-- Commande -->
+  <main class="container-fluid mt-5">
+    <div class="raw d-flex justify-content-center">
+      <div class="col d-flex justify-content-center flex-wrap">
+
+        <div id="confirm-order">
+
+          <!-- ici seront placés le numéro de commande, les articles commandés et l'adresse de livraison -->
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- end commande -->
+
+  <!-- Footer -->
+  <div class="container-fluid pt-4 bg-dark">
+    <div class="row mb-4 ">
+      <div class="col-md-4 col-sm-11 col-xs-11">
+        <div class="footer-text pull-left">
+          <div class="d-flex">
+            <h1 class="h4 font-weight-bold text-light">Orinoco</h1>
+          </div>
+          <p class="card-text text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non pariatur
+            numquam animi nam at impedit odit nisi.</p>
+          <div class="social mt-2 mb-3 text-light"> <i class="fa fa-facebook-official fa-lg"></i> <i
+              class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i
+              class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-1 col-xs-1 mb-2"></div>
+      <div class="col-md-2 col-sm-4 col-xs-4">
+        <h5 class="heading text-light">Services</h5>
+        <ul>
+          <li class="text-light nav-link">Livraison</li>
+          <li class="text-light nav-link">Retour marchandise</li>
+          <li class="text-light nav-link">Conditions de paiement</li>
+          <li class="text-light nav-link">Carte de fidélité</li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-4">
+        <h5 class="heading text-light">La société</h5>
+        <ul class="card-text">
+          <li class="text-light nav-link">À propos de nous</li>
+          <li class="text-light nav-link">Blog</li>
+          <li class="text-light nav-link">Contact</li>
+          <li class="text-light nav-link">Nous joindre</li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider mb-4 "> </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="pull-left">
+          <p class="text-light"><i class="text-light fa fa-copyright"></i> 2020 - Orinoco</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="pull-right d-flex justify-content-center">
+          <div class="text-light mx-3">Conditions d'utilisation</div>
+          <div class="text-light mx-3">Mentions légales</div>
+          <div class="text-light mx-3">Gestion des Cookies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Footer -->
+
+  <!-- lien commande.js -->
+  <script async src="js/commande.js"></script>
+
+  <!-- lien app.js -->
+  <script async src="js/app.js"></script>
+
+  <!-- liens Bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <!-- Lien fontawesome -->
+  <script src="https://kit.fontawesome.com/ac73661cb6.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
