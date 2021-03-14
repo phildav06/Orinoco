@@ -2,7 +2,7 @@
 P5 OpenClassRooms - Construisez un site e-commerce
 
 
-Ce projet a pour but d'évaluer les Compétences suivantes :
+Ce projet a pour but d'évaluer les compétences suivantes :
 
     ● Interagir avec un web service avec JavaScript
   
