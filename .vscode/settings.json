@@ -1,4 +1,13 @@
 {
     "liveServer.settings.port": 5501,
-    "editor.linkedEditing": true
+    "editor.linkedEditing": true,
+    "cSpell.language": ",fr",
+    "spellright.language": [
+        "fr"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
 }
