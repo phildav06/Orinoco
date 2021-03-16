@@ -62,10 +62,7 @@ for (const btn of btnRemoveProducts) {
     // Ecoute du bouton supprimer
     btn.addEventListener('click', function (e) {
 
-        // Récupération de l'attribut << data-id >> du HTML
-        const id = e.target.getAttribute("data-id");
-
-        // Récupération de l'attribut << data-index >> du HTML
+        // Récupération de l'attribut << data-index >> du bouton supprimer du HTML
         const index = e.target.getAttribute("data-index");
 
         // Suppression des produits
@@ -129,9 +126,11 @@ const validForm = function (inputForm) {
     if (testForm) {
         // Si les champs sont bien remplis, affiche << OK ! >> 
         small.innerHTML = `<p class="text-success mt-1">Ok !</p>`;
+        return true
     } else {
         // Si les champs ne sont pas bien remplis, affiche << Veuillez entrer le champ valide ! >>
         small.innerHTML = `<p class="text-danger font-weight-bold mt-1">Veuillez entrer ${label} valide !</p>`;
+        return false
     }
 };
 
