@@ -78,7 +78,6 @@ const addToCart = () => {
             color: optionColors.value,
             price: teddy.price,
             quantity: 1,
-            // total: price * quantity,
         }
         products.push(ligne);
     } else {
