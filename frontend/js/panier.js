@@ -131,7 +131,7 @@ const validForm = function (inputForm) {
         // Si les champs ne sont pas bien remplis, affiche << Veuillez entrer le champ valide ! >>
         small.innerHTML = `<p class="text-danger font-weight-bold mt-1">Veuillez entrer ${label} valide !</p>`;
         return false
-    }
+    };
 };
 
 /* ---------- ENVOYER LA COMMANDE AU SERVEUR ----------
@@ -165,8 +165,26 @@ sendData = (orderRequest) => {
 // Envoyer le formulaire en cliquant sur le bouton << Commander >>
 const btnOrder = document.getElementById('post-form');
 
+// On ecoute l'évènement << submit >>
 btnOrder.addEventListener('submit', (e) => {
+    
+    // On empêche l'action du bouton par défaut
     e.preventDefault();
+
+    // Si les champs ne sont pas correctement remplis ou le montant total est égale à 0
+    if (!validForm(contact.firstname) ||
+        !validForm(contact.lastname) ||
+        !validForm(contact.postaladdress) ||
+        !validForm(contact.zipcode) ||
+        !validForm(contact.city) ||
+        !validForm(contact.email) ||
+        !calculTotal(products)
+    ) {
+        // On alerte l'utilisateur
+        alert('Merci de remplir les champs correctement et vérifiez si des articles sont dans le panier !');
+        return;
+    };
+
     if (products || []) {
         console.log('On peut commander !');
         // initialisation des données du formulaire à transmettre
